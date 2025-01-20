@@ -2,17 +2,37 @@
   "name": "z2m-homie5-extension",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "dist/main.js",
+  "bin": "dist/cli.js",
+  "source": "src/main.ts",
+  "engines": {
+    "node": ">=18"
+  },
+  "targets": {
+    "main": {
+      "optimize": true,
+      "sourceMap": false
+    },
+    "bin": {
+      "source": "src/cli.ts",
+      "sourceMap": false,
+      "optimize": false
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build",
+    "watch": "parcel watch --no-hmr"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@tsconfig/node18": "^18.2.4",
+    "@types/yargs": "^17.0.33",
     "mqtt": "^5.10.3",
+    "parcel": "^2.13.3",
     "typescript": "^5.7.3",
+    "yargs": "^17.7.2",
     "zigbee-herdsman": "^3.2.1",
     "zigbee-herdsman-converters": "^21.15.0",
     "zigbee2mqtt": "^2.0.0"

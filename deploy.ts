@@ -34,7 +34,7 @@ async function main() {
     }),
     {
       qos: 2,
-      retain: true,
+      retain: false,
     }
   );
 }
