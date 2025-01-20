@@ -21,4 +21,4 @@ node ./cli.js --help
 ## Future
 
 When everything works and homie v5 is stable I will create a PR to get this into
-the zigbee2mqtt codebase as a build-in extension, just like the homeassistant extension
+the zigbee2mqtt codebase as a built-in extension, just like the homeassistant extension
